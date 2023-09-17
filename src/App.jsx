@@ -2,20 +2,20 @@ import { useEffect, useState } from "react";
 import axios from "axios";
 import Header from "./components/Header";
 
-
-
 function App() {
   const [searchValue, setSearchValue] = useState('');
   const [cityValue, setCityValue] = useState('')
-  const [apiResults, setApiResults] = useState([])
   
   const handleChange = (ev) => setSearchValue(ev.target.value)
 
   const handleClick = () => setCityValue(searchValue)
+  
 
   useEffect(() => {
     async function getForecast() {
-      const url = ``
+      const apiKey = import.meta.env.VITE_REACT_APP_API_KEY
+      console.log(apiKey);
+      const url = `https://api.openweathermap.org/data/2.5/weather?q=${cityValue}&units=metric&appid=${apiKey}&lang=pt_br`;
       try {
         const response = await axios.get(url);
         console.log(response);
@@ -23,7 +23,9 @@ function App() {
         console.error(error);
       }
     }
-    getForecast()
+    if (cityValue) {
+      getForecast();
+    }
   }, [cityValue])
 
   return (
@@ -31,6 +33,7 @@ function App() {
     <Header 
     handleChangeEvent={handleChange}
     handleClickEvent={handleClick}/>
+    <p>{}</p>
     </>
   )
 }
