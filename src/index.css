@@ -1,0 +1,45 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  min-height: 100vh;
+  width: 100%;
+  background-image: url(./images/mountain-3351653_1280.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  margin: 10px;
+}
+
+.container-search {
+  display: flex;
+  align-items: center;
+  margin-right: 10px;
+}
+
+.container-search label, input {
+  margin: 10px;
+}
+
+.container-search input {
+  padding: 5px;
+  background-color: aquamarine;
+  border-radius: 6px;
+}
+
+.btn-search {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
