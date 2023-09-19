@@ -10,7 +10,6 @@ export default function Header({handleChangeEvent, handleClickEvent}) {
     
   return (
     <header>
-        <div className="logo"><h1>Logo</h1></div>
         <div className="container-search">
             <label htmlFor="citySearch">Busque por uma Cidade:</label>
             <input 
