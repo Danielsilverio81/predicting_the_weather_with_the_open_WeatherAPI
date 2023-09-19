@@ -19,10 +19,6 @@ header {
   align-items: center;
 }
 
-.logo {
-  margin: 10px;
-}
-
 .container-search {
   display: flex;
   align-items: center;
@@ -30,7 +26,7 @@ header {
 }
 
 .container-search label, input {
-  margin: 10px;
+  margin: 5px;
 }
 
 .container-search input {
@@ -60,7 +56,7 @@ header {
   padding: 2px;
   width: 90%;
   max-width: 400px;
-  height: 450px;
+  height: 440px;
   background-color: #7B68EE;
   border-radius: 10px;
   border: 1px solid gray;
@@ -109,6 +105,10 @@ strong {
   align-items: center;
 }
 
+img {
+  margin: 4px;
+}
+
 .icon-description {
   width: 100%;
   max-width: 70px;
@@ -119,4 +119,23 @@ strong {
   display: flex;
   flex-direction: column;
   margin: 2px 5px;
+}
+
+.fade-in {
+  animation: fade-in 1.1s ease-in-out;
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+
+@media (max-width: 400px) {
+  label {font-size: 12px;}
+  input {width: 130px;}
 }

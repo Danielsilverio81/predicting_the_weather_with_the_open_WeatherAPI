@@ -1,6 +1,6 @@
 import PropTypes from "prop-types";
 import Welcome from "./Welcome";
-import clearSky from "../../public/images/clear-sky.png";
+import clearSky from "../assets/images_import/clear-sky.png";
 
 MainContent.propTypes = {
   results: PropTypes.array,
@@ -17,7 +17,7 @@ export default function MainContent({ results }) {
           <>
           <div
           key={data.id}
-          className="information"
+          className="information fade-in"
           >
           <div className="info-temp">
             <h2>{data.name}</h2>

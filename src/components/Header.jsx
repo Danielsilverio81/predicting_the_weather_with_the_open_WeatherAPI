@@ -3,19 +3,21 @@ import PropTypes from "prop-types";
 
 Header.propTypes = {
   handleChangeEvent: PropTypes.func,
-  handleClickEvent: PropTypes.func
+  handleClickEvent: PropTypes.func,
+  handleKeyDownEvent: PropTypes.func
 }
 
-export default function Header({handleChangeEvent, handleClickEvent}) {
+export default function Header({handleChangeEvent, handleClickEvent, handleKeyDownEvent}) {
     
   return (
     <header>
         <div className="container-search">
-            <label htmlFor="citySearch">Busque por uma Cidade:</label>
+            <label htmlFor="citySearch">Busque uma Cidade:</label>
             <input 
             type="search" 
             id="citySearch"
             onChange={handleChangeEvent}
+            onKeyDown={handleKeyDownEvent}
             />
             <button
             className="btn-search"
