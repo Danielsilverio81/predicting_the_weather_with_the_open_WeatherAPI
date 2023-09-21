@@ -64,7 +64,9 @@ function App() {
     />
     <main className="main-content">
       <MainContent currentWeatherData={currentWeatherApiData} />
-      {cityValue !== '' ? <NextDayInformation nextDayInfo={nextDayInfoApi}/> : <p>Aguardando...</p>}
+      {cityValue !== '' ? <NextDayInformation nextDayInfo={nextDayInfoApi}/> : <div className="content">
+        <p>Aguardando Sua Busca...</p>
+      </div>}
       {error !== '' ? <ErrorElement message={error}/> : null}
     </main>
     </>
