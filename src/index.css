@@ -38,6 +38,9 @@ label {
   text-shadow: 1px 1px 1px aquamarine;
   font-size: 1.3em;
 }
+label:hover {
+  border-color: blue;
+}
 
 .container-search input {
   padding: 5px;
