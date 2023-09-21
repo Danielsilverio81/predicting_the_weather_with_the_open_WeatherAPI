@@ -12,6 +12,11 @@ html, body {
   background-size: cover;
 }
 
+h2 {
+  font-size: 1.4em;
+  text-shadow: 1px 1px 1px white;
+}
+
 header {
   padding: 5px;
   display: flex;
@@ -44,51 +49,70 @@ header {
 .main-content {
   width: 100%;
   display: flex;
-  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
   flex: 1 0 auto;
 }
 
 .content {
   display: flex;
-  align-items: center;
-  justify-content: center;
-  margin: 20px auto;
+  flex-wrap: wrap;
+  gap: 5px;
+  margin: 30px;
   padding: 2px;
-  width: 90%;
-  max-width: 400px;
-  height: 440px;
+  width: fit-content;
+  height: auto;
   background-color: #7B68EE;
   border-radius: 10px;
-  border: 1px solid gray;
+  border: 1px solid black;
 }
 
-.content h2 {
-  margin: 10px auto;
+.nextDay-content {
+  margin: 35px;
+  padding: 5px;
+  width: 95%;
+  max-width: 458px;
+  border: 1px solid black;
+  border-radius: 10px;
+  height: fit-content;
+  display: grid;
+  grid-auto-rows: auto;
+  grid-template-columns: repeat(auto-fill, 85px);
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  background-color: darkcyan; 
+}
+
+.other-elements-info {
+  background-color: white;
+  padding: 1px;
   text-align: center;
-  text-shadow: 1px 1px 1px white;
+  width: 86px;
+  height: 125px;
+  font-size: 0.7em;
+  border-radius: 5px;
 }
 
-.content p {
-  line-height: 1.4em;
-  margin: 4px;
-  font-size: 1.2em;
+.other-elements-info p {
+  margin: 2px;
 }
+
 
 .information {
   display: flex;
   justify-content: space-between;
-  gap: 10px;
-  padding: 1px;
+  gap: 20px;
+  padding: 4px;
   background-color: aquamarine;
-  width: 96%;
-  height: 90%;
-  margin: 1px auto;
+  margin: 10px;
   border-radius: 10px;
 }
 
 span {
   margin-top: 10px;
-  margin-left: 22px;
+  margin-left: 12px;
   font-size: 2.5em;
 }
 
@@ -102,6 +126,7 @@ strong {
   margin: 10px 5px;
   display: flex;
   flex-direction: column;
+  gap: 3px;
   align-items: center;
 }
 
@@ -118,6 +143,7 @@ img {
 .info-temp {
   display: flex;
   flex-direction: column;
+  gap: 4px;
   margin: 2px 5px;
 }
 
@@ -138,4 +164,14 @@ img {
 @media (max-width: 400px) {
   label {font-size: 12px;}
   input {width: 130px;}
+  .other-elements-info {
+    font-size: 0.6em;
+    height: 110px;
+  }
+  .information {
+    font-size: 0.8em;
+    text-align: center;
+    gap: 5px;
+    padding: 1px;
+  }
 }
