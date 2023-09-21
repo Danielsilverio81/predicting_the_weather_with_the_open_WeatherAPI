@@ -3,12 +3,14 @@ import axios from "axios";
 import Header from "./components/Header";
 import MainContent from "./components/MainContent";
 import NextDayInformation from "./components/NextDayInformation";
+import ErrorElement from "./components/ErrorElement";
 
 function App() {
   const [searchValue, setSearchValue] = useState('');
   const [cityValue, setCityValue] = useState('')
   const [currentWeatherApiData, setCurrentWeatherApiData] = useState([]);
   const [nextDayInfoApi, setNextDayInfoApi] =  useState([])
+  const [error, setError] = useState('')
   
   const handleChange = (ev) => setSearchValue(ev.target.value)
 
@@ -29,12 +31,10 @@ function App() {
       const response2 = await axios.get(url2);
       const data = response1.data
       const list = response2.data.list
-      console.log(data);
-      console.log(list);
       setCurrentWeatherApiData([data])
       setNextDayInfoApi(list)
     } catch (error) {
-      console.error(error);
+      setError(error.message)
     }
   }
 
@@ -64,7 +64,8 @@ function App() {
     />
     <main className="main-content">
       <MainContent currentWeatherData={currentWeatherApiData} />
-      {cityValue !== '' ? <NextDayInformation nextDayInfo={nextDayInfoApi}/> : ''}
+      {cityValue !== '' ? <NextDayInformation nextDayInfo={nextDayInfoApi}/> : <p>Aguardando...</p>}
+      {error !== '' ? <ErrorElement message={error}/> : null}
     </main>
     </>
   )

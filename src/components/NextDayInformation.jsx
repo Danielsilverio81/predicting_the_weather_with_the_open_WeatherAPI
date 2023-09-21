@@ -20,12 +20,12 @@ const formatWord = (word) => word.charAt(0).toUpperCase() + word.slice(1);
 
 export default function NextDayInformation({nextDayInfo}) {
   return (
-    <div  className="nextDay-content fade-in">
+    <div  className="nextDay-content">
         {nextDayInfo.map(item => (
             <div
             key={item.dt}
             >
-                 <div className="other-elements-info">
+                 <div className="other-elements-info  fade-in">
                        <div className="info-temp">
                         <strong>{dataFormat(item.dt_txt)}</strong> 
                         <p><strong style={{ color: textColor }}>{temp = item.main.temp}</strong> ºC</p> 

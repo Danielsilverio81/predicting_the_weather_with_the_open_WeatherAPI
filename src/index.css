@@ -34,6 +34,11 @@ header {
   margin: 5px;
 }
 
+label {
+  text-shadow: 1px 1px 1px aquamarine;
+  font-size: 1.3em;
+}
+
 .container-search input {
   padding: 5px;
   background-color: aquamarine;
@@ -158,6 +163,14 @@ img {
   to {
     opacity: 1;
   }
+}
+
+.error-container {
+  width: 90%;
+  background-color: white;
+  color: red;
+  border: 1px solid red;
+  border-radius: 10px;
 }
 
 
