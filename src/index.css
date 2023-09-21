@@ -38,7 +38,8 @@ label {
   text-shadow: 1px 1px 1px aquamarine;
   font-size: 1.3em;
 }
-label:hover {
+
+input:hover {
   border-color: blue;
 }
 
