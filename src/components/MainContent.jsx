@@ -48,7 +48,7 @@ export default function MainContent({ currentWeatherData }) {
                         <p>Umidade: <strong>{data.main.humidity}%</strong></p> 
                         <p><strong>{data.weather[0].description}</strong></p> 
                         <img className="icon-description" src={`${data.weather[0].description == 'céu limpo' ? clearSky 
-                        : `https://openweathermap.org/img/wn/${data.weather.icon}@2x.png`}`} 
+                        : `https://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png`}`} 
                         alt={`${data.weather.description} icon`} />
                          <p>Ventos de: <strong>{data.wind.speed}km/h</strong></p>
                          <p>Nascer do sol:</p>
